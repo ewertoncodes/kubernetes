@@ -14,7 +14,7 @@ $ kubectl create -f permissoes.yaml
 $ kubectl get pods
 $ kubectl exec -it [mysql pod name]  sh
 # mysql -u root
-mysql> user loja
+mysql> use loja
 ```
 
 Paste the mysql script:
@@ -34,7 +34,7 @@ APP
 $ cd kubernetes/app/
 $ kubectl create -f deployment.yaml
 $ kubectl create -f servico-aplicacao.yaml
-$ kubectl scale deployment deployment --replicas=3
+$ kubectl scale deployment aplicacao-deployment --replicas=3
 $ kubectl get pods
 $ minikube service servico-aplicacao --url
 ```
